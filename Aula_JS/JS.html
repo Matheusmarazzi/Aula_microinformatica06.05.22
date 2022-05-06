@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- Escreva função javascript que resolva equação de 2o grau calculando suas raizes. Obter do usuário (entrada de dados) os valores de coeficientes da equação.
+    a x**2 + b*x + c = 0
+    Coloque o resultado em dois elementos H1
+    Obs.: se delta < 0, não há raizes
+          se delta == 0, há uma raiz
+          se delta > 0, há duas raizes
+    -->
+    <input type="number" id="inpA" />
+    <input type="number" id="inpB" />
+    <input type="number" id="inpC" />
+    <button id="botao">Calcular</button>
+    <h1 id="raiz1">...</h1>
+    <h1 id="raiz2">...</h1>
+</body>
+</html>
+<script type="text/javascript">
+    botao.onclick = function() {
+        var a, b, c, delta;
+        a = Number(inpA.value);
+        b = Number(inpB.value);
+        c = Number(inpC.value);
+        delta = (b ** 2) - (4 * a * c);
+        if (delta < 0)
+        {
+            raiz1.textContent = "Não existe raiz";
+            raiz2.textContent = "Não existe raiz";
+        }
+        else if (delta == 0)
+        {
+            raiz1.textContent = -b / (2 * a);
+            raiz2.textContent = "Raiz única";
+        }
+        else // delta é maior que zero
+        {
+            raiz1.textContent = (-b + delta**0.5) / (2 * a);
+            raiz2.textContent = (-b - delta**0.5) / (2 * a);
+        }
+    }
+</script>

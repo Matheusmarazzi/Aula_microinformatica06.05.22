@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Gerador de tabuada</h1>
+    <input type="number" name="" id="input1">
+    <h4 id="resultado"> Resultado</h4> 
+</body>
+</html>
+<script type="text/javascript">
+    input1.onchange = function(){
+        let num = Number(input1.value);
+        let i = 1, r="";
+        while(i <= 15){
+            r = r +(i * num)+"<br/>";
+            i++;
+        }
+        resultado.innerHTML = r;
+
+    }
+
+</script>
